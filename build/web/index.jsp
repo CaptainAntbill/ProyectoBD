@@ -33,7 +33,7 @@
                         <th>Localidad</th>
                         <th>Genero</th>
                         <th>Direccion</th>
-                        <th>Direccion</th>
+                        <th>Acciones</th>
                     </tr>
                 </thead>
                 <tbody>

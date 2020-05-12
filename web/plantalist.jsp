@@ -40,7 +40,7 @@
                         <td>${datos.getTotal_camas()}</td>
                         <td>
                             <form action="ServletPlanta" method="POST">
-                                <input type="hidden" name="id" value="${datos.getNo_planta()}">
+                                <input type="hidden" name="id" value="${datos.getNo_planta()}">s
                                 <input type="submit" name="accion" value="Ver">
                             </form>
                         </td>

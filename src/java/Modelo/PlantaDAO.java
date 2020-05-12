@@ -80,6 +80,34 @@ public class PlantaDAO {
         }
         return p;
     }
+    
+    public int actualizar(Planta p){
+        int r=0;
+        String sql="update planta set nombre=?, total_camas=? where no_planta=?";
+        try {
+            con=c.conectar();
+            ps=con.prepareStatement(sql);
+            con=c.conectar();
+                ps=con.prepareStatement(sql);
+                ps.setString(1, p.getNombre());
+                ps.setInt(2, p.getTotal_camas());
+                ps.setInt(3, p.getNo_planta());
+                r=ps.executeUpdate();
+                if(r==1){
+                    r=1;
+                }else {
+                    r=0;
+                }
+                ps.close();
+                con.close();
+        } catch (Exception e){
+              System.out.println("ERROR gggg: " + e);  
+        }
+        return r;
+
+    }
 }
+
+
 
 

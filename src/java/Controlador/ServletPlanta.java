@@ -74,6 +74,18 @@ public class ServletPlanta extends HttpServlet {
                 request.setAttribute("planta", pe);
                 request.getRequestDispatcher("plantashow.jsp").forward(request, response);
                 break;
+            case "Actualizar":
+                String no1 = request.getParameter("txtno");
+                int no2 = Integer.parseInt(no1);
+                String nom1 = request.getParameter("txtnom");
+                String total2 = request.getParameter("txttol");
+                int total1 = Integer.parseInt(total2);
+                p.setNo_planta(no2);
+                p.setNombre(nom1);
+                p.setTotal_camas(total1);
+                dao.actualizar(p);
+                request.getRequestDispatcher("ServletPlanta?accion=Listar").forward(request, response);
+                break;
         }
         processRequest(request, response);
     }
